@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var graphView: GraphView!
-    var hourlyTempsOnly = [Double]()
+    var hourlyTempsOnly = [Int]()
+    var timeHourTemp = [String]()
     
     let store = HourlyTemperatureDatastore.sharedInstance
 
@@ -20,13 +21,21 @@ class ViewController: UIViewController {
         
         self.store.getWeatherHourlyTemperature { (hourlyData) in
             for singleHourlyTemp in self.store.hourlyTemperatureArray{
-                self.hourlyTempsOnly.append(singleHourlyTemp.temperature!)
+                self.hourlyTempsOnly.append(Int(singleHourlyTemp.temperature!))
                 self.graphView.temps = self.hourlyTempsOnly
-                //passed information to the graphview
-                //these are the coordinates for the y axis 
+                
             }
         }
                 
+    }
+    
+    func convertTimeStampToHoursOnly (timeStamp: Double) -> String{
+        let date = NSDate(timeIntervalSince1970: timeStamp)
+        let dayTimePeriodFormatter = DateFormatter()
+        dayTimePeriodFormatter.dateFormat = "hh a"
+        let dateString = dayTimePeriodFormatter.string(from: date as Date)
+        print(dateString)
+        return dateString
     }
 
     override func didReceiveMemoryWarning() {
