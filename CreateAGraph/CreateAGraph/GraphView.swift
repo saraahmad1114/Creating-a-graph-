@@ -67,5 +67,13 @@ import UIKit
                                    start: startPoint,
                                    end: endPoint,
                                    options: [])
+        
+        let margin = Constants.margin
+        let graphWidth = width - margin * 2 - 4
+        let columnXPoint = { (column: Int) -> CGFloat in
+            //Calculate the gap between points
+            let spacing = graphWidth / CGFloat(self.temps.count - 1)
+            return CGFloat(column) * spacing + margin + 2
+        }
     }
 }
