@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var graphView: GraphView!
     var hourlyTempsOnly = [Double]()
     
-    
     let store = HourlyTemperatureDatastore.sharedInstance
 
     override func viewDidLoad() {
@@ -22,9 +21,12 @@ class ViewController: UIViewController {
         self.store.getWeatherHourlyTemperature { (hourlyData) in
             for singleHourlyTemp in self.store.hourlyTemperatureArray{
                 self.hourlyTempsOnly.append(singleHourlyTemp.temperature!)
+                self.graphView.temps = self.hourlyTempsOnly
+                //passed information to the graphview
+                //these are the coordinates for the y axis 
             }
         }
-        
+                
     }
 
     override func didReceiveMemoryWarning() {
