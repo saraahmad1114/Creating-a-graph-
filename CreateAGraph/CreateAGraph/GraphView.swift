@@ -37,6 +37,9 @@ import UIKit
     
     override func draw(_ rect: CGRect) {
         
+        let width = rect.width
+        let height = rect.height
+        
         let path = UIBezierPath(roundedRect: rect,
                                 byRoundingCorners: .allCorners,
                                 cornerRadii: Constants.cornerRadiusSize)
