@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var graphView: GraphView!
+    
     let store = HourlyTemperatureDatastore.sharedInstance
 
     override func viewDidLoad() {
