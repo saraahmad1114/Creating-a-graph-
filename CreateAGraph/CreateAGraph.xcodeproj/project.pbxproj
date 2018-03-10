@@ -17,6 +17,7 @@
 		581B5B162053563E00E8E329 /* CreateAGraphUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B5B152053563E00E8E329 /* CreateAGraphUITests.swift */; };
 		581B5B24205357EF00E8E329 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B5B23205357EF00E8E329 /* APIClient.swift */; };
 		581B5B262053591400E8E329 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B5B252053591400E8E329 /* Secrets.swift */; };
+		581B5B2820535D4E00E8E329 /* HourlyTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B5B2720535D4E00E8E329 /* HourlyTemperature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		581B5B172053563E00E8E329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		581B5B23205357EF00E8E329 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		581B5B252053591400E8E329 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		581B5B2720535D4E00E8E329 /* HourlyTemperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTemperature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				581B5B23205357EF00E8E329 /* APIClient.swift */,
 				581B5B252053591400E8E329 /* Secrets.swift */,
 				581B5AF42053563E00E8E329 /* ViewController.swift */,
+				581B5B2720535D4E00E8E329 /* HourlyTemperature.swift */,
 				581B5AF62053563E00E8E329 /* Main.storyboard */,
 				581B5AFC2053563E00E8E329 /* Assets.xcassets */,
 				581B5AFE2053563E00E8E329 /* LaunchScreen.storyboard */,
@@ -271,6 +274,7 @@
 				581B5AFB2053563E00E8E329 /* CreateAGraph.xcdatamodeld in Sources */,
 				581B5B262053591400E8E329 /* Secrets.swift in Sources */,
 				581B5AF52053563E00E8E329 /* ViewController.swift in Sources */,
+				581B5B2820535D4E00E8E329 /* HourlyTemperature.swift in Sources */,
 				581B5AF32053563E00E8E329 /* AppDelegate.swift in Sources */,
 				581B5B24205357EF00E8E329 /* APIClient.swift in Sources */,
 			);
