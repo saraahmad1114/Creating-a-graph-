@@ -9,6 +9,10 @@
 import Foundation
 
 class HourlyTemperatureDatastore{
+   
+    static let sharedInstance = HourlyTemperatureDatastore()
+    private init() {}
+    
     
     
     
