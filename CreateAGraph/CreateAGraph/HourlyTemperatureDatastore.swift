@@ -13,9 +13,11 @@ class HourlyTemperatureDatastore{
     static let sharedInstance = HourlyTemperatureDatastore()
     private init() {}
     
+    var hourlyTemperatureArray = [HourlyTemperature]()
     
-    
-    
-    
-    
+    func getWeatherHourlyTemperature (completion:@escaping ([HourlyTemperature]) -> ()){
+      
+        
+    }
+ 
 }
