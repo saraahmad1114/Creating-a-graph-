@@ -87,14 +87,14 @@ import UIKit
         
         // calculate the y point
         //THIS WORKS
-        let topBorder = Constants.topBorder
-        let bottomBorder = Constants.bottomBorder
-        let graphHeight = height - topBorder - bottomBorder
-        let maxValue = self.temps.max()!
-        let columnYPoint = { (graphPoint: Int) -> CGFloat in
-            let y = CGFloat(graphPoint) / CGFloat(maxValue) * graphHeight
-            return graphHeight + topBorder - y // Flip the graph
-        }
+//        let topBorder = Constants.topBorder
+//        let bottomBorder = Constants.bottomBorder
+//        let graphHeight = height - topBorder - bottomBorder
+//        let maxValue = self.temps.max()!
+//        let columnYPoint = { (graphPoint: Int) -> CGFloat in
+//            let y = CGFloat(graphPoint) / CGFloat(maxValue) * graphHeight
+//            return graphHeight + topBorder - y // Flip the graph
+//        }
         
         
 //        let margin = Constants.margin

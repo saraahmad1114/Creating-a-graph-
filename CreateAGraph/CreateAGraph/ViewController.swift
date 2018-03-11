@@ -21,14 +21,20 @@ class ViewController: UIViewController {
         
         self.store.getWeatherHourlyTemperature { (hourlyData) in
             for singleHourlyTemp in self.store.hourlyTemperatureArray{
-                self.hourlyTempsOnly.append(Int(singleHourlyTemp.temperature!))
+                if let unwrappedTime = singleHourlyTemp.temperature{
+                self.hourlyTempsOnly.append(Int(unwrappedTime))
                 self.graphView.temps = self.hourlyTempsOnly
-                
+                }
+                if let hourlyTime = singleHourlyTemp.time{
+                self.timeHourTemp.append(self.convertTimeStampToHoursOnly(timeStamp: hourlyTime))
+                self.graphView.hours = self.timeHourTemp
+                }
             }
         }
                 
     }
     
+    //converted so that I get the hours and the AM or PM of the time 
     func convertTimeStampToHoursOnly (timeStamp: Double) -> String{
         let date = NSDate(timeIntervalSince1970: timeStamp)
         let dayTimePeriodFormatter = DateFormatter()
