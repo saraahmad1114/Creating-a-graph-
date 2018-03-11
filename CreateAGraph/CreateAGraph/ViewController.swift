@@ -34,13 +34,12 @@ class ViewController: UIViewController {
                 
     }
     
-    //converted so that I get the hours and the AM or PM of the time 
+    //converted so that I get the hours and the AM or PM of the time- EVERYTHING WORKS HERE! 
     func convertTimeStampToHoursOnly (timeStamp: Double) -> String{
         let date = NSDate(timeIntervalSince1970: timeStamp)
         let dayTimePeriodFormatter = DateFormatter()
         dayTimePeriodFormatter.dateFormat = "hh a"
         let dateString = dayTimePeriodFormatter.string(from: date as Date)
-        print(dateString)
         return dateString
     }
 
